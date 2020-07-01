@@ -1,0 +1,51 @@
+#body{
+    background-color: rgb(236, 236, 236) !important;
+}
+.nav{
+    padding: 15px;
+}
+ol li{
+    text-decoration: none;
+}
+a.nav-link.active{
+    color: lightgray;
+}
+a.nav-link.disabled{
+    color: lightgray;
+}
+a.nav-link:hover{
+    color:white;
+}
+#div{
+    padding: 60px 40px;
+}
+.linea{
+    color: lightgrey;
+}
+.text{
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+}
+#modelId{
+    height: 65%;
+    width: 40%;
+}
+.modal-body{
+    margin: 0px 40px 0px 20px;
+}
+#modelRegistro, #modelEditar{
+    height: 100%;
+    width: 40%;
+}
+#inputs{
+    height: auto;
+}
+input[type="text"]{
+    text-transform: capitalize;
+}
+
+#modelDelete, #modelDelete1{
+    height: auto;
+    width: auto;
+}

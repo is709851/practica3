@@ -1,0 +1,68 @@
+GET https://users-dasw.herokuapp.com/api/tokenDASW
+x-expediente: 709851
+###
+POST https://users-dasw.herokuapp.com/api/login
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+
+{
+    "correo":"is709851@test.com",
+    "password":"abcdef"
+}
+
+
+### TAMBIÉN PUEDES BUSCAR ASI: ?nombre=L
+GET  https://users-dasw.herokuapp.com/api/users?nombre=Test
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiY29ycmVvIjoiaXM3MDk4NTFAdGVzdC5jb20iLCJpaWQiOjE3LCJpYXQiOjE1OTM1MzYzNTgsImV4cCI6MTU5MzUzOTk1OH0.jKzJPKyBbnmeqKw2EQthZMTt50jjuBOCxtPPKHghWR0
+
+### REGISTRAR UN USUARIO
+
+POST  https://users-dasw.herokuapp.com/api/users
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+
+{
+    "nombre":"L",
+    "apellido":"G",
+    "correo":"test@test.com",
+    "url":"",
+    "sexo":"M",
+    "fecha":"10-10-2019",
+    "password":"abcd"
+}
+
+### OBTENER USUARIO test2@t.com
+GET  https://users-dasw.herokuapp.com/api/users/test2@t.com
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiY29ycmVvIjoiaXM3MDk4NTFAdGVzdC5jb20iLCJpaWQiOjE0LCJpYXQiOjE1OTM0ODM2MTIsImV4cCI6MTU5MzQ4NzIxMn0.14SICKbeq1vooL9j7SiCylYOskJ7l1_acy-BmnB7x4M
+
+### ACTUALIZAR USUARIO t@t.com
+PUT  https://users-dasw.herokuapp.com/api/users/test@test.com
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiY29ycmVvIjoiaXM3MDk4NTFAdGVzdC5jb20iLCJpaWQiOjE3LCJpYXQiOjE1OTM1MzYzNTgsImV4cCI6MTU5MzUzOTk1OH0.jKzJPKyBbnmeqKw2EQthZMTt50jjuBOCxtPPKHghWR0
+
+{
+    "nombre":"Test",
+    "apellido":"Test",
+    "correo":"test@test.com",
+    "url": "https://randomuser.me/api/portraits/men/8.jpg",
+    "sexo":"H",
+    "fecha":"10-10-2012",
+    "password":"abcdef"
+}
+
+### BORRAR AL USUARIO test2@test.com
+
+DELETE  https://users-dasw.herokuapp.com/api/users/prbr@test.com
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiY29ycmVvIjoiaXM3MDk4NTFAaXRlc28ubXgiLCJpaWQiOjIsImlhdCI6MTU5MzQ4MTE1NiwiZXhwIjoxNTkzNDg0NzU2fQ.DMku2jpTUrdT7LMSPzQQls6zuNhmJPryA8bnHZJwwro
+
+###
+GET  https://users-dasw.herokuapp.com/api/users
+Content-Type: application/json
+x-auth: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiaWF0IjoxNTkzNDUyNzY1fQ.gUItcupF8w2_7OQc66bpPQxFbf2a3TayiB4pAN2bCEs
+x-user-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBlZGllbnRlIjoiNzA5ODUxIiwiY29ycmVvIjoiaXM3MDk4NTFAdGVzdC5jb20iLCJpaWQiOjE3LCJpYXQiOjE1OTM1NDAwNzgsImV4cCI6MTU5MzU0MzY3OH0.zxZPqGm3h1WZLe7boLsnknPib1Zh-6uMuIiLBPl69Wc
